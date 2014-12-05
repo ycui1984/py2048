@@ -1,6 +1,6 @@
 #!/usr/bin/python2.7
 
-# py2048 is a linux version of the popular game of 2048.
+# py2048 is a Python implementation of the popular game of 2048.
 # Copyright (C) 2014 Ralph Embree
 #
 # This program is free software; you can redistribute it and/or modify
