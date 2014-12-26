@@ -7,7 +7,7 @@ A PyGTK implementation of [Gabriele Cirulli's game of 2048](https://github.com/g
 
 ## License
 py2048 is a Python implementation of the popular game of 2048.
-Copyright (C) 2014 Ralph Embree
+Copyright © 2014 Ralph Embree
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -20,5 +20,5 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along
-with this program.  If not, see [http://www.gnu.org/licenses/gpl.txt](http://www.gnu.org/licenses/gpl.txt).
+with this program.  If not, see [http://www.gnu.org/licenses](http://www.gnu.org/licenses).
 
