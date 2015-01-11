@@ -30,7 +30,7 @@ import time
 
 
 #Do not change this line or the one after it.
-high_score = {(12, 12): 660, (4, 4): 975368, (12, 4): 52}
+high_score = {}
 class dummy(object):
     pass
 
