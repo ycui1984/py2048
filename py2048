@@ -28,6 +28,7 @@ import pickle
 import os
 import time
 
+__version__ = "0.1.2"
 
 class dummy(object):
     pass
@@ -533,7 +534,7 @@ class Game(object):
         about = AboutDialog()
         about.set_skip_taskbar_hint(True)
         about.set_program_name("py2048")
-        about.set_version("0.1")
+        about.set_version(__version__)
         about.set_website("http://brominator.org")
         about.set_authors(("Ralph Embree",))
         about.set_logo(self.pixbuf)
