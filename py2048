@@ -21,8 +21,7 @@ from sys import argv
 from string import replace
 
 from gtk import *
-from random import random, randint, choice
-from threading import Thread
+from random import random, choice
 from traceback import format_exception
 import pickle
 import os
