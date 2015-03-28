@@ -13,7 +13,7 @@ A PyGTK implementation of [Gabriele Cirulli's game of 2048](https://github.com/g
 ##Screenshot
 
 <p align="center">
-  <img src="https://github.com/ralphembree/py2048/screenshot.png" alt="Screenshot"/>
+  <img src="https://github.com/ralphembree/py2048/blob/master/screenshot.png" alt="Screenshot"/>
 </p>
 
 ## License
