@@ -16,6 +16,17 @@ A PyGTK implementation of [Gabriele Cirulli's game of 2048](https://github.com/g
   <img src="https://github.com/ralphembree/py2048/blob/master/screenshot.png" alt="Screenshot"/>
 </p>
 
+##Features
+* There is an undo button.  You can guess what it does.
+* You can save your game to a file and open it later.
+* You can change the size of your grid.
+* There are two kinds of mouse interaction possible (toggled by a menu item)
+
+The two kinds of mouse interaction are:
+###
+* Swipe: click and hold and then move in the direction desired
+* Click: each section of the grid (top, bottom, left, right) will move the tiles in a different direction.  The cursor will be an arrow pointing in the direction the tiles would go if you clicked.
+
 ## License
 py2048 is a Python implementation of the popular game of 2048.
 Copyright © 2014 Ralph Embree
