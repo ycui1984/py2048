@@ -537,7 +537,7 @@ class Game(object):
         about.set_website("http://brominator.org")
         about.set_authors(("Ralph Embree",))
         about.set_logo(self.pixbuf)
-        about.set_comments("2048 was originally written as a web application, but since then many different versions have been made.  The author knows of no other linux versions of the game, however.  The object of the game is to create a tile containing the number 2048 by making the other tiles combine.  Only tiles of the same value can combine.  This version has features the original does not have: undoing, saving games, changing the grid size, and more.")
+        about.set_comments("2048 was originally written as a web application, but since then many different versions have been made.  The object of the game is to create a tile containing the number 2048 by making the other tiles combine.  Only tiles of the same value can combine.  This version has features the original does not have: undoing, saving games, changing the grid size, and more.")
         about.set_copyright("Copyright \xc2\xa9 2014 Ralph Embree")
         about.set_license(
         """py2048 is free software; you can redistribute it and/or modify
