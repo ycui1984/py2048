@@ -10,6 +10,12 @@ A PyGTK implementation of [Gabriele Cirulli's game of 2048](https://github.com/g
 2. sudo chmod +x /usr/bin/py2048
 3. sudo wget https://raw.githubusercontent.com/ralphembree/py2048/master/2048.png -O /usr/share/icons/hicolor/64x64/apps/py2048.png
 
+##Screenshot
+
+<p align="center">
+  <img src="https://github.com/ralphembree/py2048/screenshot.png" alt="Screenshot"/>
+</p>
+
 ## License
 py2048 is a Python implementation of the popular game of 2048.
 Copyright © 2014 Ralph Embree
