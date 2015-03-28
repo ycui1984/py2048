@@ -22,8 +22,7 @@ A PyGTK implementation of [Gabriele Cirulli's game of 2048](https://github.com/g
 * You can change the size of your grid.
 * There are two kinds of mouse interaction possible (toggled by a menu item)
 
-The two kinds of mouse interaction are:
-###
+### The two kinds of mouse interaction are:
 * Swipe: click and hold and then move in the direction desired
 * Click: each section of the grid (top, bottom, left, right) will move the tiles in a different direction.  The cursor will be an arrow pointing in the direction the tiles would go if you clicked.
 
