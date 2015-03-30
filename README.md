@@ -6,9 +6,11 @@ Play the popular game of 2048
 A PyGTK implementation of [Gabriele Cirulli's game of 2048](https://github.com/gabrielecirulli/2048) which is itself a clone of [1024](https://play.google.com/store/apps/details?id=com.veewo.a1024) and based on [Saming's 2048](http://saming.fr/p/2048/) (also a clone).
 
 ##Installation
-1. sudo wget https://raw.githubusercontent.com/ralphembree/py2048/master/py2048 -O /usr/bin/py2048
-2. sudo chmod +x /usr/bin/py2048
-3. sudo wget https://raw.githubusercontent.com/ralphembree/py2048/master/2048.png -O /usr/share/icons/hicolor/64x64/apps/py2048.png
+Open a terminal and enter the following commands:
+
+wget https://github.com/ralphembree/py2048/install.sh
+sh install.sh
+rm install.sh
 
 ##Screenshot
 
