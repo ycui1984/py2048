@@ -8,9 +8,9 @@ A PyGTK implementation of [Gabriele Cirulli's game of 2048](https://github.com/g
 ##Installation
 Open a terminal and enter the following commands:
 
-wget https://github.com/ralphembree/py2048/install.sh
-sh install.sh
-rm install.sh
+* wget https://github.com/ralphembree/py2048/install.sh
+* sh install.sh
+* rm install.sh
 
 ##Screenshot
 
