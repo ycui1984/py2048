@@ -12,12 +12,6 @@ Open a terminal and enter the following commands:
     sh install.sh
     rm install.sh
 
-##Screenshot
-
-<p align="center">
-  <img src="https://github.com/ralphembree/py2048/blob/master/screenshot.png" alt="Screenshot"/>
-</p>
-
 ##Features
 * There is an undo button.  You can guess what it does.
 * You can save your game to a file and open it later.
@@ -27,6 +21,12 @@ Open a terminal and enter the following commands:
 ### The two kinds of mouse interaction are:
 * Swipe: click and hold and then move in the direction desired
 * Click: each section of the grid (top, bottom, left, right) will move the tiles in a different direction.  The cursor will be an arrow pointing in the direction the tiles would go if you clicked.
+
+##Screenshot
+
+<p align="center">
+  <img src="https://github.com/ralphembree/py2048/blob/master/screenshot.png" alt="Screenshot"/>
+</p>
 
 ## License
 py2048 is a Python implementation of the popular game of 2048.
