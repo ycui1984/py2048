@@ -1,9 +1,9 @@
 sudo -v
 echo "Downloading source code..."
-sudo wget https://github.com/ralphembree/py2048/blob/master/py2048 -O /usr/games/py2048
+sudo wget https://raw.githubusercontent.com/ralphembree/py2048/master/py2048
 sudo chmod +x /usr/games/py2048
 echo "Downloading icon..."
-sudo wget https://github.com/ralphembree/py2048/blob/master/2048.png -O /usr/share/icons/hicolor/64x64/apps/py2048.png
+sudo wget https://raw.githubusercontent.com/ralphembree/py2048/master/2048.png -O /usr/share/icons/hicolor/64x64/apps/py2048.png
 
 echo "Adding menu item..."
 echo "[Desktop Entry]
