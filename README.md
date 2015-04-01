@@ -10,7 +10,6 @@ Open a terminal and enter the following commands:
 
     wget https://raw.githubusercontent.com/ralphembree/py2048/master/install.sh
     sh install.sh
-    rm install.sh
 
 ##Features
 * There is an undo button.  You can guess what it does.
