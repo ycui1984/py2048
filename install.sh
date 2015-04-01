@@ -16,5 +16,5 @@ Exec=py2048
 Name=py2048
 Icon=/usr/share/icons/hicolor/64x64/apps/py2048.png
 Categories=Game" | sudo tee /usr/share/applications/py2048.desktop >/dev/null
-echo -e "\033[34mThe application can be run from the terminal by typing 'py2048' and can also be accessed from the start menu in the games section.\033[m"
+echo -e "\033[1;34mThe application can be run from the terminal by typing 'py2048' and can also be accessed from the start menu in the games section.\033[m"
 
