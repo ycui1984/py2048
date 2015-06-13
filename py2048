@@ -174,7 +174,7 @@ class Game(object):
         self.window.connect(
             "drag_motion",
 # call context.drag_status and return True.  The boolean equivalent of a
-# list is its length.
+# list is whether or not it is unempty.
             lambda w,c,x,y,t:[c.drag_status(gdk.ACTION_COPY, t)]
         )
 
@@ -748,8 +748,7 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
                 num_0 = 2 - len(green)
                 green = ("0" * num_0) + green
             num = "%s%s%s" % (red, green, blue)
-            z_num = 6 - len(str(num))
-            color = "#" + ("0" * z_num) + num
+            color = "#" + num
             tile.color = color
             tile.ev.modify_bg(STATE_NORMAL, gdk.Color(color))
             tile.label.modify_fg(STATE_NORMAL, fg_color)
