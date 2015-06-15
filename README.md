@@ -10,6 +10,9 @@ Open a terminal and enter the following command:
 
     wget https://raw.githubusercontent.com/ralphembree/py2048/master/install.sh -q -O - | bash
 
+This will put the executable file in /usr/bin.
+To run the program, simply type py2048 into the command prompt.
+
 ##Features
 * There is an undo button.  You can guess what it does.
 * You can save your game to a file and open it later.
