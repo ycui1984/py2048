@@ -345,7 +345,8 @@ class Game(object):
 
         file_chooser.connect("confirm-overwrite", on_overwrite)
         file_chooser.connect("response", func)
-        file_chooser.show()
+        file_chooser.run()
+        return self.changes == self.saved_changes
 
     def save_to_file(self, filename=None, *args):
         if filename is None or args:
@@ -987,7 +988,7 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
         if self.changes == self.saved_changes and title.startswith("*"):
             self.window.set_title(title[1:])
         elif self.changes != self.saved_changes and not title.startswith("*"):
-            self.window.set_title("*" + get_title)
+            self.window.set_title("*" + title)
 
     def on_destroy(self, widget, event):
         if self.changes == self.saved_changes or self.over:
@@ -997,7 +998,10 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
                 if response == CLOSE:
                     self.quit()
                 elif response == SAVE:
-                    if not self.save_to_file(self.filename) is None:
+                    if "filename" not in dir(self):
+                        if self.save_as_dialog():
+                            self.quit()
+                    elif not self.save_to_file(self.filename) is None:
                         self.quit()
                 else:
                     self.delete_id = self.window.connect("delete-event", self.on_destroy)
