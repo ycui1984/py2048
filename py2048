@@ -631,7 +631,7 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
         self.update_tiles()
         self.changes = []
         self.undo_button.set_sensitive(False)
-        self.beat_highscore = False
+        self.beat_highscore = high_score.get((len(self.rows), len(self.columns)), 0) == 0)
         self.update_fonts()
 
     def onkey(self, widget, event):
