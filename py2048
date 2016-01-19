@@ -527,10 +527,6 @@ class Game(object):
         self.update_score()
 
     def about(self, *args):
-        def onlink(widget, website, data):
-            from webbrowser import open_new_tab
-            open_new_tab(website)
-
         about = AboutDialog()
         about.set_skip_taskbar_hint(True)
         about.set_program_name("py2048")
