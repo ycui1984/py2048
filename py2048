@@ -21,10 +21,11 @@ from sys import argv
 from string import replace
 
 from gtk import *
-from random import random, choice
+import random
 from traceback import format_exception
 import pickle
 import os
+import math
 import time
 
 __version__ = "0.1.2"
@@ -624,6 +625,7 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
         self.new_tile()
         self.table.set_size_request(17, 12 * len(str(2 ** (len(self.cells) + 1))))
         self.window.show()
+        self.set_colors()
         self.update_tiles()
         self.changes = []
         self.undo_button.set_sensitive(False)
@@ -632,6 +634,17 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
 
     def onkey(self, widget, event):
         value = event.keyval
+
+        # if control is the only key being held down, or if state - 4 is
+        # an exponent of two.  (If you look at the __flags_values__
+        # attribute of GdkModifierType, you will see that each flag is an
+        # exponent of two.  When flags are put together, the resulting flag
+        # is the sum of those flags.  If, say, 16 and 32 were put together,
+        # than subtracting 4 would no longer be an exponent of two.  The
+        # sum of two flags minus 4 will be an exponent of 2 only when 4 is
+        # one of those flags.)
+        control_is_held = (int(event.state) == 4 or math.frexp(int(event.state) - 4)[0] == 0.5)
+
         if value == keysyms.Left:
             self.left()
         elif value == keysyms.Right:
@@ -641,14 +654,19 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
         elif value == keysyms.Down:
             self.down()
         # Ctrl-z
-        elif value == keysyms.z and event.state == gdk.CONTROL_MASK | gdk.MOD2_MASK:
+        elif value == keysyms.z and control_is_held:
             self.undo()
         elif value == keysyms.F11 and self.is_fullscreen:
             self.toggle_fullscreen()
         elif value == keysyms.Escape and self.is_fullscreen:
             self.toggle_fullscreen()
-        elif value == keysyms.m and event.state == gdk.CONTROL_MASK | gdk.MOD2_MASK and self.is_fullscreen:
+        # Ctrl-m
+        elif value == keysyms.m and control_is_held and self.is_fullscreen:
             self.switch_mouse_mode()
+        # Ctrl-r
+        elif value == keysyms.r and control_is_held:
+            self.set_colors()
+            self.update_tiles()
 
     def random_available_cell(self):
         cells = []
@@ -657,7 +675,7 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
                 cells.append(tile)
         if len(cells) == 0:
             return []
-        return choice(cells)
+        return random.choice(cells)
 
     def game_over(self):
         self.over = True
@@ -686,13 +704,28 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
         if tile is None:
             self.game_over()
             return
-        value = random()
+        value = random.random()
         if value > 0.9:
             value = 4
         else:
             value = 2
         tile.value = value
         return tile
+
+    def set_colors(self):
+        number = len(self.cells) - 1
+        multiplier = 1. / (number + 1)
+        start_out_list = list(((x + 1) * multiplier) for x in range(number))
+        hues = start_out_list[:]
+        random.shuffle(hues)
+        saturations = start_out_list[:]
+        random.shuffle(saturations)
+        values = start_out_list[:]
+        random.shuffle(values)
+        hsvs = zip(hues, saturations, values)
+        negative_hsvs = list(tuple((0.5 + hs_or_v) % 1 for hs_or_v in hsv) for hsv in hsvs)
+        self.colors = list(gdk.Color("#" + "".join((hex(int(n * 255))[2:]).zfill(2) for n in hsv_to_rgb(*l))) for l in hsvs)
+        self.text_colors = list(gdk.Color("#" + "".join((hex(int(n * 255))[2:]).zfill(2) for n in hsv_to_rgb(*l))) for l in negative_hsvs)
 
     def update_tiles(self):
         changes = []
@@ -718,6 +751,7 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
                     prev_val = None
                 if value != prev_val:
                     changes.append((tile, prev_val))
+            """
             num = int((768.0 * new_val) / (len(self.cells) - 1))
             if num > 384:
                 fg_color = gdk.Color("black")
@@ -747,8 +781,17 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
             num = "%s%s%s" % (red, green, blue)
             color = "#" + num
             tile.color = color
-            tile.ev.modify_bg(STATE_NORMAL, gdk.Color(color))
-            tile.label.modify_fg(STATE_NORMAL, fg_color)
+            """
+        def how_many_2s(number):
+            result = 0
+            while number > 1:
+                result += 1
+                number /= 2
+            return result
+        for tile in self.cells:
+            position = how_many_2s(tile.value) - 1
+            tile.ev.modify_bg(STATE_NORMAL, self.colors[position])
+            tile.label.modify_fg(STATE_NORMAL, self.text_colors[position])
         self.changes.append(changes)
         self.update_fonts()
         self.check_game_over()
