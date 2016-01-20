@@ -18,6 +18,7 @@ To run the program, simply type py2048 into the command prompt or click py2048 i
 * You can save your game to a file and open it later.
 * You can change the size of your grid.
 * There are two kinds of mouse interaction possible (toggled by a menu item)
+* The colors in the grid can be rerandomized at any time (without messing up your game)
 
 ### The two kinds of mouse interaction are:
 * Swipe: click and hold and then move in the direction desired

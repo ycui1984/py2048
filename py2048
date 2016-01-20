@@ -62,6 +62,7 @@ class Game(object):
             ("/Game/_Convert mouse", "<control>M", lambda widget, event: self.switch_mouse_mode(), 0, "<Item>"),
             ("/Game/", None, None, 0, "<Separator>"),
             ("/Game/_New Grid", "<control>N", self.new_grid, 0, "<StockItem>", STOCK_NEW),
+            ("/Game/_Refresh Colors", "<control>R", lambda widget, event: (self.set_colors(), self.update_tiles()), 0, "<StockItem>", STOCK_REFRESH),
             ("/Game/_Open...", "<control>O", self.open_dialog, 0, "<StockItem>", STOCK_OPEN),
             ("/Game/", None, None, 0, "<Separator>"),
             ("/Game/_Save", "<control>S", self.save_to_file, 0, "<StockItem>", STOCK_SAVE),
@@ -532,7 +533,7 @@ class Game(object):
         about.set_skip_taskbar_hint(True)
         about.set_program_name("py2048")
         about.set_version(__version__)
-        about.set_website("http://brominator.org")
+        about.set_website("https://github.com/ralphembree")
         about.set_authors(("Ralph Embree",))
         about.set_logo(self.pixbuf)
         about.set_comments("2048 was originally written as a web application, but since then many different versions have been made.  The object of the game is to create a tile containing the number 2048 by making the other tiles combine.  Only tiles of the same value can combine.  This version has features the original does not have: undoing, saving games, changing the grid size, and more.")
@@ -663,10 +664,6 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
         # Ctrl-m
         elif value == keysyms.m and control_is_held and self.is_fullscreen:
             self.switch_mouse_mode()
-        # Ctrl-r
-        elif value == keysyms.r and control_is_held:
-            self.set_colors()
-            self.update_tiles()
 
     def random_available_cell(self):
         cells = []
