@@ -13,7 +13,7 @@ if [ ! -f /usr/share/mime/packages/application-2048.xml ]; then
     <comment>py2048 mime type</comment>
     <glob pattern="*.2048"/>
   </mime-type>
-</mime-info>' | sudo tee /usr/share/mime/packages/application-2048.xml
+</mime-info>' | sudo tee /usr/share/mime/packages/application-2048.xml >/dev/null
 fi
 
 echo "Adding menu item..."
@@ -21,11 +21,11 @@ echo "[Desktop Entry]
 Version=1.0
 Type=Application
 Terminal=false
-Icon[en_US]=/usr/share/icons/hicolor/64x64/apps/py2048.png
+Icon[en_US]=py2048
 Name[en_US]=py2048
 Exec=py2048
 Name=py2048
-Icon=/usr/share/icons/hicolor/64x64/apps/py2048.png
+Icon=py2048
 Categories=Game
 MimeType=application/2048" | sudo tee /usr/share/applications/py2048.desktop >/dev/null
 sudo update-mime-database /usr/share/mime

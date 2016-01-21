@@ -710,7 +710,7 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
         return tile
 
     def set_colors(self):
-        number = len(self.cells) - 1
+        number = len(self.cells) + 1
         multiplier = 1. / (number + 1)
         start_out_list = list(((x + 1) * multiplier) for x in range(number))
         hues = start_out_list[:]
@@ -748,37 +748,6 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
                     prev_val = None
                 if value != prev_val:
                     changes.append((tile, prev_val))
-            """
-            num = int((768.0 * new_val) / (len(self.cells) - 1))
-            if num > 384:
-                fg_color = gdk.Color("black")
-            else:
-                fg_color = gdk.Color("white")
-            red, green, blue = ("00", "00", "00")
-            if num >= 256:
-                green = "ff"
-                num -= 256
-                if num >= 256:
-                    red = "ff"
-                    num -= 256
-                    if num >= 256:
-                        blue = "ff"
-                    else:
-                        blue = hex(num)[2:]
-                        num_0 = 2 - len(blue)
-                        blue = ("0" * num_0) + blue
-                else:
-                    red = hex(num)[2:]
-                    num_0 = 2 - len(red)
-                    red = ("0" * num_0) + red
-            else:
-                green = hex(num)[2:]
-                num_0 = 2 - len(green)
-                green = ("0" * num_0) + green
-            num = "%s%s%s" % (red, green, blue)
-            color = "#" + num
-            tile.color = color
-            """
         def how_many_2s(number):
             result = 0
             while number > 1:
@@ -1141,7 +1110,7 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
         row_label.set_text_with_mnemonic("_Rows:")
         row_label.show()
         table.attach(row_label, 0, 1, 1, 2)
-        rows = SpinButton(Adjustment(len(self.rows), 0, 12, 1, 2), digits=0)
+        rows = SpinButton(Adjustment(len(self.rows), 2, 12, 1, 2), digits=0)
         row_label.set_mnemonic_widget(rows)
         rows.set_numeric(True)
         rows.show()
@@ -1151,7 +1120,7 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
         col_label.show()
         table.attach(col_label, 0, 1, 2, 3)
         cols = SpinButton(
-            Adjustment(len(self.columns), 0, 12, 1, 2),
+            Adjustment(len(self.columns), 2, 12, 1, 2),
             digits=0
         )
         col_label.set_mnemonic_widget(cols)
