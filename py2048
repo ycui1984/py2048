@@ -18,7 +18,6 @@
 
 from math import log
 from sys import argv
-from string import replace
 
 from gtk import *
 import random
@@ -170,7 +169,7 @@ class Game(object):
             if len(url) > 1:
                 return False
             url = url[0]
-            url = replace(os.path.normpath(url.strip("file").strip(":")), "%20", " ")
+            url = os.path.normpath(url.strip("file").strip(":")).replace("%20", " ")
             return {'url': url, 'isfile': os.path.isfile(url)}
         self.window.drag_dest_set(0, [], 0)
         self.window.connect(
@@ -644,7 +643,7 @@ with py2048.  If not, see http://www.gnu.org/licenses""")
         # than subtracting 4 would no longer be an exponent of two.  The
         # sum of two flags minus 4 will be an exponent of 2 only when 4 is
         # one of those flags.)
-        control_is_held = (int(event.state) == 4 or math.frexp(int(event.state) - 4)[0] == 0.5)
+        control_is_held = not ((event.state - 4) & (event.state - 5))
 
         if value == keysyms.Left:
             self.left()
