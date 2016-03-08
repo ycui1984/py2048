@@ -36,27 +36,29 @@ The arrow keys determine which direction all of the tiles move.  Tiles with the 
 
 ##Shortcut keys:
 
-`Alt-N` Start new game
+|Key|Action|
+|:---|:---|
+|`Alt-N`|Start new game|
 
-`Ctrl-N` New grid size (user defined)
+|`Ctrl-N`|New grid size (user defined)|
 
-`Alt-U`/`Ctrl-Z` Undo
+|`Alt-U`/`Ctrl-Z`|Undo|
 
-`Ctrl-C` New color scheme
+|`Ctrl-C`|New color scheme|
 
-`Ctrl-M` Toggle mouse modes (swipe or click)
+|`Ctrl-M`|Toggle mouse modes (swipe or click)|
 
-`Ctrl-O` Open saved game
+|`Ctrl-O`|Open saved game|
 
-`Ctrl-Shift-S` Open save game dialog
+|`Ctrl-Shift-S`|Open save game dialog|
 
-`Ctrl-S` Save game to previously defined file
+|`Ctrl-S`|Save game to previously defined file|
 
-`F11` Toggle fullscreen
+|`F11`|Toggle fullscreen|
 
-`F1` Help
+|`F1`|Help|
 
-`Ctrl-Q` Quit
+|`Ctrl-Q`|Quit|
 
 
 ##License
