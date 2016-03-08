@@ -58,10 +58,10 @@ class Game(object):
 
         menu_items = (
             ("/_Game", None, None, 0, "<Branch>"),
-            ("/Game/_Convert mouse", "<control>M", lambda widget, event: self.switch_mouse_mode(), 0, "<Item>"),
+            ("/Game/Convert _mouse", "<control>M", lambda widget, event: self.switch_mouse_mode(), 0, "<Item>"),
             ("/Game/", None, None, 0, "<Separator>"),
             ("/Game/_New Grid", "<control>N", self.new_grid, 0, "<StockItem>", STOCK_NEW),
-            ("/Game/_Refresh Colors", "<control>R", lambda widget, event: (self.set_colors(), self.update_tiles()), 0, "<StockItem>", STOCK_REFRESH),
+            ("/Game/New _color scheme", "<control>C", lambda widget, event: (self.set_colors(), self.update_tiles()), 0, "<StockItem>", STOCK_REFRESH),
             ("/Game/_Open...", "<control>O", self.open_dialog, 0, "<StockItem>", STOCK_OPEN),
             ("/Game/", None, None, 0, "<Separator>"),
             ("/Game/_Save", "<control>S", self.save_to_file, 0, "<StockItem>", STOCK_SAVE),

@@ -20,7 +20,7 @@ To run the program, simply type py2048 into the command prompt or click py2048 i
 * There are two kinds of mouse interaction possible (toggled by a menu item)
 * The colors in the grid can be rerandomized at any time (without messing up your game)
 
-### The two kinds of mouse interaction are:
+###The two kinds of mouse interaction are:
 * Swipe: click and hold and then move in the direction desired
 * Click: each section of the grid (top, bottom, left, right) will move the tiles in a different direction.  The cursor will be an arrow pointing in the direction the tiles would go if you clicked.
 
@@ -30,7 +30,25 @@ To run the program, simply type py2048 into the command prompt or click py2048 i
   <img src="https://github.com/ralphembree/py2048/blob/master/screenshot.gif" alt="Screenshot-gif"/>
 </p>
 
-## License
+##How to play
+
+The arrow keys determine which direction all of the tiles move.  Tiles with the same number that hit each other merge into one tile.  Each time tiles are moved, another tile is added to the board.  The game is over when no more tiles can be merged.
+
+##Shortcut keys:
+
+`Alt-N` Start new game
+`Ctrl-N` New grid size (user defined)
+`Alt-U`/`Ctrl-Z` Undo
+`Ctrl-C` New color scheme
+`Ctrl-M` Toggle mouse modes (swipe or click)
+`Ctrl-O` Open saved game
+`Ctrl-Shift-S` Open save game dialog
+`Ctrl-S` Save game to previously defined file
+`F11` Toggle fullscreen
+`F1` Help
+`Ctrl-Q` Quit
+
+##License
 py2048 is a Python implementation of the popular game of 2048.
 Copyright © 2014 Ralph Embree
 
