@@ -39,25 +39,15 @@ The arrow keys determine which direction all of the tiles move.  Tiles with the 
 |Key|Action|
 |:---|:---|
 |`Alt-N`|Start new game|
-
 |`Ctrl-N`|New grid size (user defined)|
-
 |`Alt-U`/`Ctrl-Z`|Undo|
-
 |`Ctrl-C`|New color scheme|
-
 |`Ctrl-M`|Toggle mouse modes (swipe or click)|
-
 |`Ctrl-O`|Open saved game|
-
 |`Ctrl-Shift-S`|Open save game dialog|
-
 |`Ctrl-S`|Save game to previously defined file|
-
 |`F11`|Toggle fullscreen|
-
 |`F1`|Help|
-
 |`Ctrl-Q`|Quit|
 
 
