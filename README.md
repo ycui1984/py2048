@@ -14,15 +14,13 @@ This will put the executable file in /usr/games.
 To run the program, simply type py2048 into the command prompt or click py2048 in your Games menu.
 
 ##Features
-* There is an undo button.  You can guess what it does.
-* You can save your game to a file and open it later.
-* You can change the size of your grid.
-* There are two kinds of mouse interaction possible (toggled by a menu item)
+* Moves can be undone with the click of a button.
+* Games can be saved in user-specified files to be resumed later.
+* Grid size can be resized to preference.
+* In addition to the keyboard, there are two kinds of mouse interaction
+  * Swipe: click and hold and then move in the direction desired
+  * Click: each section of the grid (top, bottom, left, right) when clicked will move the tiles in a different direction.  The cursor will be an arrow pointing in the direction the tiles would go if you clicked.
 * The colors in the grid can be rerandomized at any time (without messing up your game)
-
-###The two kinds of mouse interaction are:
-* Swipe: click and hold and then move in the direction desired
-* Click: each section of the grid (top, bottom, left, right) will move the tiles in a different direction.  The cursor will be an arrow pointing in the direction the tiles would go if you clicked.
 
 ##Screenshot
 
