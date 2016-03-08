@@ -27,7 +27,6 @@ To run the program, simply type py2048 into the command prompt or click py2048 i
 ##Screenshot
 
 <p align="center">
-  <img src="https://github.com/ralphembree/py2048/blob/master/screenshot.png" alt="Screenshot"/>
   <img src="https://github.com/ralphembree/py2048/blob/master/screenshot.gif" alt="Screenshot-gif"/>
 </p>
 
