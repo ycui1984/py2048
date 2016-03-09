@@ -17,22 +17,20 @@ To run the program, simply type py2048 into the command prompt or click py2048 i
 * Moves can be undone with the click of a button.
 * Games can be saved in user-specified files to be resumed later.
 * Grid size can be resized to preference.
-* In addition to the keyboard, there are two kinds of mouse interaction
+* In addition to the keyboard, there are two kinds of mouse interaction:
   * Swipe: click and hold and then move in the direction desired
   * Click: each section of the grid (top, bottom, left, right) when clicked will move the tiles in a different direction.  The cursor will be an arrow pointing in the direction the tiles would go if you clicked.
-* The colors in the grid can be rerandomized at any time (without messing up your game)
+* The colors in the grid can be rerandomized at any time (without messing up your game).
 
 ##Screenshot
 
-<p align="center">
-  <img src="https://github.com/ralphembree/py2048/blob/master/test.gif" alt="Screenshot-gif"/>
-</p>
+![GIF-Screenshot]("https://github.com/ralphembree/py2048/blob/master/screenshot.gif")
 
 ##How to play
 
 The arrow keys determine which direction all of the tiles move.  Tiles with the same number that hit each other merge into one tile.  Each time tiles are moved, another tile is added to the board.  The game is over when no more tiles can be merged.
 
-##Shortcut keys:
+##Shortcut keys
 
 |Key|Action|
 |:---|:---|
@@ -41,9 +39,9 @@ The arrow keys determine which direction all of the tiles move.  Tiles with the 
 |`Alt-U`/`Ctrl-Z`|Undo|
 |`Ctrl-C`|New color scheme|
 |`Ctrl-M`|Toggle mouse modes (swipe or click)|
-|`Ctrl-O`|Open saved game|
-|`Ctrl-Shift-S`|Open save game dialog|
-|`Ctrl-S`|Save game to previously defined file|
+|`Ctrl-O`|Load saved game|
+|`Ctrl-Shift-S`|Save game under a different name|
+|`Ctrl-S`|Save game to previously-defined file|
 |`F11`|Toggle fullscreen|
 |`F1`|Help|
 |`Ctrl-Q`|Quit|
@@ -64,5 +62,5 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along
-with this program.  If not, see [http://www.gnu.org/licenses](http://www.gnu.org/licenses).
+with this program.  If not, see http://www.gnu.org/licenses
 
