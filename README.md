@@ -8,15 +8,18 @@ A PyGTK implementation of [Gabriele Cirulli's game of 2048](https://github.com/g
 ##Installation
 Open a terminal and enter the following command:
 
+    pip install git+https://github.com/ralphembree/py2048.git
+
+In case you don't have the right things installed and you don't feel like installing them, there is still the old way that I created before I learned setuptools:
+
     wget https://raw.githubusercontent.com/ralphembree/py2048/master/install.sh -q -O - | bash
 
-This will put the executable file in /usr/games.
-To run the program, simply type py2048 into the command prompt or click py2048 in your Games menu.
+The old way does a little bit more than the new way because I'm still learning the new way.  Either one will create the py2048 executable, so the game can be started from the command prompt with a simple "py2048".  The old way, in addition, puts an entry in your Games menu.
 
 ##Features
 * Moves can be undone with the click of a button.
 * Games can be saved in user-specified files to be resumed later.
-* Grid size can be resized to preference.
+* Grid can be resized to preference.
 * In addition to the keyboard, there are two kinds of mouse interaction:
   * Swipe: click and hold and then move in the direction desired
   * Click: each section of the grid (top, bottom, left, right) when clicked will move the tiles in a different direction.  The cursor will be an arrow pointing in the direction the tiles would go if you clicked.
