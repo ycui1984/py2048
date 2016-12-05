@@ -9,7 +9,6 @@ setup(name='py2048',
       author_email='ralph.embree@brominator.org',
       url='https://github.com/ralphembree/py2048',
       scripts=['py2048'],
-      data_files=[('', ['py2048.png'])],
       classifiers = [
         'Environment :: X11 Applications :: GTK',
         'Intended Audience :: End Users/Desktop',
