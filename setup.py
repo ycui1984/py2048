@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name='py2048-game',
-      version='1.0',
+      version='1.0.1',
       description='PyGTK implementation of the popular 2048 game',
       author='Ralph Embree',
       author_email='ralph.embree@brominator.org',
