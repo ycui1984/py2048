@@ -54,7 +54,6 @@ Screenshot
 .. figure:: https://github.com/ralphembree/py2048/blob/master/screenshot.gif
    :alt: Screencapture of game
 
-   GIF-Screenshot
 How to play
 -----------
 
