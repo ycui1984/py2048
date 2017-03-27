@@ -25,6 +25,7 @@ Icon[en_US]=py2048
 Name[en_US]=py2048
 Exec=py2048
 Name=py2048
+Description=Play the popular puzzle game of 2048
 Icon=py2048
 Categories=Game
 MimeType=application/2048" | sudo tee /usr/share/applications/py2048.desktop >/dev/null

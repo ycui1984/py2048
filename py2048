@@ -61,7 +61,7 @@ class Game(object):
             ("/Game/Convert _mouse", "<control>M", lambda widget, event: self.switch_mouse_mode(), 0, "<Item>"),
             ("/Game/", None, None, 0, "<Separator>"),
             ("/Game/_New Grid", "<control>N", self.new_grid, 0, "<StockItem>", STOCK_NEW),
-            ("/Game/New _color scheme", "<control>C", lambda widget, event: (self.set_colors(), self.update_tiles()), 0, "<StockItem>", STOCK_REFRESH),
+            ("/Game/New _Color Scheme", "<control>C", lambda widget, event: (self.set_colors(), self.update_tiles()), 0, "<StockItem>", STOCK_REFRESH),
             ("/Game/_Open...", "<control>O", self.open_dialog, 0, "<StockItem>", STOCK_OPEN),
             ("/Game/", None, None, 0, "<Separator>"),
             ("/Game/_Save", "<control>S", self.save_to_file, 0, "<StockItem>", STOCK_SAVE),
@@ -80,11 +80,13 @@ class Game(object):
         menubar = item_factory.get_widget("<main>")
         item_factory.get_item("/Game/Convert mouse").set_tooltip_text("Convert mouse to swipe mode.")
         item_factory.get_item("/Game/New Grid").set_tooltip_text("Change the size of your grid.")
+        item_factory.get_item("/Game/New Color Scheme").set_tooltip_text("Change to another random color scheme for this game.")
         item_factory.get_item("/Game/Open...").set_tooltip_text("Open a previously saved game.")
         item_factory.get_item("/Game/Save").set_sensitive(False)
         item_factory.get_item("/Game/Save").set_tooltip_text("Save this game.")
         item_factory.get_item("/Game/Save as...").set_tooltip_text("Save game with a different name.")
         item_factory.get_item("/Game/Fullscreen").set_tooltip_text("Toggle fullscreen view.")
+        item_factory.get_item("/Game/Quit").set_tooltip_text("Quit game without saving.")
         item_factory.get_item("/Help/About").set_tooltip_text("About py2048")
         self.item_factory = item_factory
         alignment = Alignment()
